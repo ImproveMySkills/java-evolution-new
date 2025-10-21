@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3794f8d9-e55d-46c0-9a2b-8eb206a29a5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/asyncapiintegration/AsyncApiIntegration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/CallableExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/ForkJoinSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/ForkJoinSumMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/FutureExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/RunnableExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/executors/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/executors/OrderProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/executors/OrderProcessorMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/datatime/DateTimeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/fonctionalinterface/CustomFunctionalInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/fonctionalinterface/CustomFunctionalInterfaceMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/models/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/models/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/models/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/mono/AchatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/process/AdvancedProcessExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/process/AdvancedProcessWindows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/process/ProcessExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/streams/StreamMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/utils/PersonUtil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="34NDL9FGldSosJmeB6j6t4vtaks" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "C:/Users/ahabouba/IdeaProjects/java-evolution-new/src/main/java/com/improvemyskills/evolution/concurrents/executors"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ahabouba\IdeaProjects\java-evolution-new\src\main\java\com\improvemyskills\evolution\concurrents\executors" />
+      <recent name="C:\Users\ahabouba\IdeaProjects\java-evolution-new\src\main\java\com\improvemyskills\evolution\concurrents" />
+      <recent name="C:\Users\ahabouba\IdeaProjects\java-evolution-new\src\main\java\com\improvemyskills\evolution\fonctionalinterface" />
+      <recent name="C:\Users\ahabouba\IdeaProjects\java-evolution-new\src\main\java\com\improvemyskills\evolution\models" />
+      <recent name="C:\Users\ahabouba\IdeaProjects\java-evolution-new\src\main\java\com\improvemyskills\evolution\process" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.improvemyskills.evolution.datatime" />
+      <recent name="com.improvemyskills.evolution.utils" />
+      <recent name="com.improvemyskills.evolution.streams" />
+      <recent name="com.improvemyskills.evolution.mono" />
+      <recent name="asyncapiintegration" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3794f8d9-e55d-46c0-9a2b-8eb206a29a5c" name="Changes" comment="" />
+      <created>1761045080120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761045080120</updated>
+    </task>
+    <servers />
+  </component>
+</project>
