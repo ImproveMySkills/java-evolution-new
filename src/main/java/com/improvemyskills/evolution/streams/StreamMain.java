@@ -20,6 +20,11 @@ public class StreamMain {
                 new Employee("Anna", "Finance", 3500)
         );
 
+        employees.parallelStream().forEach(e -> System.out.println(e.getDepartment()));
+        //employees.stream().forEach(e -> System.out.println(e.getDepartment()));
+
+        double sum = employees.stream().mapToDouble(e -> e.getSalary()).sum();
+
 
         List<Employee> evenIndexEmployees = IntStream.range(0, employees.size())
                 .filter(i -> i % 2 == 0) // garde les index pairs

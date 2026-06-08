@@ -19,6 +19,7 @@ public class OrderProcessorMain {
         }
 
         // Envoi de notifications toutes les 2 secondes
+/*
         scheduler.scheduleAtFixedRate(new NotificationService(), 0, 2, TimeUnit.SECONDS);
 
         executor.shutdown();
@@ -27,6 +28,7 @@ public class OrderProcessorMain {
         } catch (InterruptedException e) {
             executor.shutdownNow();
         }
+*/
 
         scheduler.shutdown();
     }

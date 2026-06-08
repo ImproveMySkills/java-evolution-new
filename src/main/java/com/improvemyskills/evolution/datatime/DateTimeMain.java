@@ -2,7 +2,7 @@ package com.improvemyskills.evolution.datatime;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
+//import java.time.temporal.ChronoUnit;
 
 public class DateTimeMain {
     public static void main(String[] args) {
@@ -37,7 +37,7 @@ public class DateTimeMain {
         System.out.println("Date parsée : " + parsedDate);
 
         // 7. Différence en jours
-        long daysBetween = ChronoUnit.DAYS.between(birthDate, today);
-        System.out.println("Jours depuis naissance : " + daysBetween);
+/*        long daysBetween = ChronoUnit.DAYS.between(birthDate, today);
+        System.out.println("Jours depuis naissance : " + daysBetween);*/
     }
 }
