@@ -29,6 +29,19 @@ public class TransactionAnalysis {
                                 Collectors.summarizingDouble(Transaction::amount)
                         ));
 
+        // Avec EntrySet
+
+/*        Map<String, Double> totalByUser =
+                byUser.entrySet()
+                        .stream()
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                e -> e.getValue()
+                                        .stream()
+                                        .mapToDouble(Transaction::amount)
+                                        .sum()
+                        ));*/
+
         // groupingBy vs groupingByConcurrent
 
 /*        Map<String, DoubleSummaryStatistics> statsByUser =

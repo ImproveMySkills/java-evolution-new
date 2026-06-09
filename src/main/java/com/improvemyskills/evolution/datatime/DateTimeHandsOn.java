@@ -1,31 +1,13 @@
 package com.improvemyskills.evolution.datatime;
 
+import com.improvemyskills.evolution.tp.Reservation;
+
 import java.time.*;
         import java.time.format.DateTimeFormatter;
         //import java.time.temporal.ChronoUnit;
-        import java.time.temporal.TemporalAdjusters;
-        import java.util.List;
 
-public class DateTimeExercises {
 
-    // ===== Classe métier =====
-    public static class Reservation {
-        private LocalDateTime departure;
-        private LocalDateTime arrival;
-
-        public Reservation(LocalDateTime departure, LocalDateTime arrival) {
-            this.departure = departure;
-            this.arrival = arrival;
-        }
-
-        public LocalDateTime getDeparture() {
-            return departure;
-        }
-
-        public LocalDateTime getArrival() {
-            return arrival;
-        }
-    }
+public class DateTimeHandsOn {
 
     // ===== 1. Durée =====
     public Duration getDuration(Reservation r) {
