@@ -29,6 +29,15 @@ public class TransactionAnalysis {
                                 Collectors.summarizingDouble(Transaction::amount)
                         ));
 
+        // groupingBy vs groupingByConcurrent
+
+/*        Map<String, DoubleSummaryStatistics> statsByUser =
+                validTransactions.parallelStream()
+                        .collect(Collectors.groupingByConcurrent(
+                                Transaction::user,
+                                Collectors.summarizingDouble(Transaction::amount)
+                        ));*/
+
         // affichage
         statsByUser.forEach((user, stats) -> {
             System.out.println(user +
@@ -56,5 +65,19 @@ public class TransactionAnalysis {
                         .toList();
 
         System.out.println("Utilisateurs suspects: " + suspiciousUsers);
+
+        // Java 12
+
+        Map<String, Object> result =
+                validTransactions.stream()
+                        .collect(Collectors.teeing(
+                                Collectors.maxBy(Comparator.comparingDouble(Transaction::amount)),
+                                Collectors.counting(),
+                                (max, count) -> Map.of(
+                                        "maxTransaction", max.orElse(null),
+                                        "count", count
+                                )
+                        ));
+
     }
 }

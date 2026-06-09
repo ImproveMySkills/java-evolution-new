@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3794f8d9-e55d-46c0-9a2b-8eb206a29a5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/tp/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/tp/TransactionAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/utils/DataGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/datatime/DateTimeExercises.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/datatime/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/process/ProcessMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/executors/OrderProcessorMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/concurrents/executors/OrderProcessorMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/datatime/DateTimeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/datatime/DateTimeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/streams/StreamMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/streams/StreamMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/tp/TransactionAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/tp/TransactionAnalysis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "C:/Users/ahabouba/IdeaProjects/tutos-java8"
+    "last_opened_file_path": "C:/Users/ahabouba/IdeaProjects/ecommerce-reporting"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -69,7 +67,7 @@
       <recent name="asyncapiintegration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StreamMain">
+  <component name="RunManager" selected="Application.TransactionAnalysis">
     <configuration name="OrderProcessorMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.improvemyskills.evolution.concurrents.executors.OrderProcessorMain" />
       <module name="java-evolution-new" />
@@ -96,8 +94,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransactionAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.improvemyskills.evolution.tp.TransactionAnalysis" />
+      <module name="java-evolution-new" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.improvemyskills.evolution.tp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TransactionAnalysis" />
         <item itemvalue="Application.StreamMain" />
         <item itemvalue="Application.OrderProcessorMain" />
       </list>
