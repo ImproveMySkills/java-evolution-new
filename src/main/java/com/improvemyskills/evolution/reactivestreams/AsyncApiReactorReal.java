@@ -76,6 +76,37 @@ public class AsyncApiReactorReal {
                 });
     }
 
+    static Mono<List<Product>> fetchProducts() {
+        return Mono.fromFuture(
+                        client.sendAsync(
+                                HttpRequest.newBuilder()
+                                        .uri(URI.create("https://fakestoreapi.com/products"))
+                                        .GET().build(),
+                                HttpResponse.BodyHandlers.ofString()
+                        ))
+                .map(HttpResponse::body)
+                .map(body -> {
+                    try {
+                        JsonNode root = mapper.readTree(body);
+                        List<Product> products = new ArrayList<>();
+
+                        for (JsonNode n : root) {
+                            String title = n.get("title").asText();
+                            double price = n.get("price").asDouble();
+                            products.add(new Product(title, price));
+
+/*                            if (orders.stream()
+                                    .anyMatch(o -> title.toLowerCase().contains(o.title.split(" ")[0].toLowerCase()))) {
+                                products.add(new Product(title, price));
+                            }*/
+                        }
+                        return products;
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+    }
+
     static Mono<List<Customer>> fetchCustomers() {
         return Mono.fromFuture(
                         client.sendAsync(
@@ -110,8 +141,8 @@ public class AsyncApiReactorReal {
 
         Mono<List<Order>> orders = fetchOrders();
 
-        Mono<List<Product>> products =
-                orders.flatMap(AsyncApiReactorReal::fetchProducts);
+        Mono<List<Product>> products = fetchProducts();
+                //orders.flatMap(AsyncApiReactorReal::fetchProducts);
 
         Mono<List<Customer>> customers = fetchCustomers();
 
@@ -128,5 +159,7 @@ public class AsyncApiReactorReal {
                 .doFinally(s -> System.out.println(
                         "Time: " + (System.currentTimeMillis() - start)))
                 .block();
+
+        System.out.println("Time: " + (System.currentTimeMillis() - start));
     }
 }

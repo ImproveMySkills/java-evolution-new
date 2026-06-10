@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3794f8d9-e55d-46c0-9a2b-8eb206a29a5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/tp/ReadClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/tp/StructuredConcurrencyExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/virtualThread/VirtualThreadBatchProcessing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/asyncapiintegration/AsyncApiIntegration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/asyncapiintegration/AsyncApiIntegration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/AsyncApiReactorReal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/AsyncApiReactorReal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/AsyncApiRxJavaReal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/AsyncApiRxJavaReal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/reactivestreams/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/streams/StreamMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/improvemyskills/evolution/streams/StreamMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -72,7 +74,7 @@
       <recent name="asyncapiintegration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AsyncApiRxJavaReal">
+  <component name="RunManager" selected="Application.StructuredConcurrencyExample">
     <configuration name="AsyncApiIntegration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.improvemyskills.evolution.asyncapiintegration.AsyncApiIntegration" />
       <module name="java-evolution-new" />
@@ -112,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.improvemyskills.evolution.process.ProcessMonitor" />
+    <configuration name="StructuredConcurrencyExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.improvemyskills.evolution.tp.StructuredConcurrencyExample" />
       <module name="java-evolution-new" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.improvemyskills.evolution.process.*" />
+          <option name="PATTERN" value="com.improvemyskills.evolution.tp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.improvemyskills.evolution.streams.StreamMain" />
+    <configuration name="VirtualThreadBatchProcessing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.improvemyskills.evolution.virtualThread.VirtualThreadBatchProcessing" />
       <module name="java-evolution-new" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.improvemyskills.evolution.streams.*" />
+          <option name="PATTERN" value="com.improvemyskills.evolution.virtualThread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StructuredConcurrencyExample" />
+        <item itemvalue="Application.VirtualThreadBatchProcessing" />
+        <item itemvalue="Application.AsyncApiIntegration" />
         <item itemvalue="Application.AsyncApiRxJavaReal" />
         <item itemvalue="Application.AsyncApiReactorReal" />
-        <item itemvalue="Application.ProcessMonitor" />
-        <item itemvalue="Application.AsyncApiIntegration" />
-        <item itemvalue="Application.StreamMain" />
       </list>
     </recent_temporary>
   </component>

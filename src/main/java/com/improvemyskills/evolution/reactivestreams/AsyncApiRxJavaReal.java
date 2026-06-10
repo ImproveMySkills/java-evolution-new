@@ -69,6 +69,26 @@ public class AsyncApiRxJavaReal {
             return products;
         }).subscribeOn(Schedulers.io());
     }
+    static Single<List<Product>> fetchProducts() {
+        return Single.fromCallable(() -> {
+            String body = call("https://fakestoreapi.com/products");
+            JsonNode root = mapper.readTree(body);
+
+            List<Product> products = new ArrayList<>();
+
+            for (JsonNode n : root) {
+                String title = n.get("title").asText();
+                double price = n.get("price").asDouble();
+                products.add(new Product(title, price));
+
+                // dépendance métier réelle
+/*                if (orders.stream().anyMatch(o -> title.toLowerCase().contains(o.title.split(" ")[0].toLowerCase()))) {
+                    products.add(new Product(title, price));
+                }*/
+            }
+            return products;
+        }).subscribeOn(Schedulers.io());
+    }
 
     static Single<List<Customer>> fetchCustomers() {
         return Single.fromCallable(() -> {
@@ -94,8 +114,8 @@ public class AsyncApiRxJavaReal {
 
         Single<List<Order>> orders = fetchOrders();
 
-        Single<List<Product>> products =
-                orders.flatMap(AsyncApiRxJavaReal::fetchProducts);
+        Single<List<Product>> products = fetchProducts();
+                //orders.flatMap(AsyncApiRxJavaReal::fetchProducts);
 
         Single<List<Customer>> customers = fetchCustomers();
 

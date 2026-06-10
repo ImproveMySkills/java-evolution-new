@@ -3,9 +3,9 @@ package com.improvemyskills.evolution.streams;
 import com.improvemyskills.evolution.models.Employee;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -21,6 +21,10 @@ public class StreamMain {
                 new Employee("Cissé", "IT", 4000),
                 new Employee("Anna", "Finance", 3500)
         );
+
+        employees.toArray();
+        Optional.empty();
+
 
         List<String> immutableList = List.of("Ali", "Bobo", "Cissé", "Anna");
 

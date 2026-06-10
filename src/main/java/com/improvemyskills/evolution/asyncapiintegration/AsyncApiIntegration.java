@@ -7,6 +7,8 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -33,6 +35,8 @@ class Order {
     @Override public String toString() { return "Order#" + id + " [" + title + "]"; }
 }
 
+record Bill(Long id, String reference, Double amount, LocalDateTime dateTime) {};
+
 public class AsyncApiIntegration {
 
     private static final HttpClient client = HttpClient.newHttpClient();
@@ -40,6 +44,9 @@ public class AsyncApiIntegration {
 
     // Appel API pour récupérer des clients
     static CompletableFuture<List<Customer>> fetchCustomers() {
+
+        Bill bill = new Bill(1L, "ref", 10000.0, LocalDateTime.now());
+
         return client.sendAsync(HttpRequest.newBuilder()
                                 .uri(URI.create("https://randomuser.me/api/?results=5"))
                                 .GET().build(),
@@ -143,7 +150,18 @@ public class AsyncApiIntegration {
                 });
     }
 
+
     public static void main(String[] args) {
+        var exemple = """
+                Je suis Nicolas Richou
+                Java Champion
+                Expert Backend
+                
+                """;
+        int a, b, c;
+
+
+        long start = System.currentTimeMillis();
         CompletableFuture<List<Customer>> customersFuture = fetchCustomers();
         CompletableFuture<List<Product>> productsFuture = fetchProducts();
         CompletableFuture<List<Order>> ordersFuture = fetchOrders();
@@ -152,18 +170,19 @@ public class AsyncApiIntegration {
 
         allFutures.thenRun(() -> {
             try {
-                System.out.println("=== Clients ===");
-                customersFuture.get().forEach(System.out::println);
+                System.out.println("=== Clients ==="+ customersFuture.get().size());
+                //customersFuture.get().forEach(System.out::println);
 
-                System.out.println("\n=== Produits ===");
-                productsFuture.get().forEach(System.out::println);
+                System.out.println("\n=== Produits ==="+ productsFuture.get().size());
+                //productsFuture.get().forEach(System.out::println);
 
-                System.out.println("\n=== Commandes ===");
-                ordersFuture.get().forEach(System.out::println);
+                System.out.println("\n=== Commandes ==="+ordersFuture.get().size());
+                //ordersFuture.get().forEach(System.out::println);
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }).join();
+        System.out.println("Time: " + (System.currentTimeMillis() - start));
     }
 }
