@@ -59,13 +59,16 @@ public class VirtualThreadBatchProcessingExercice {
         try (ExecutorService executor = java.util.concurrent.Executors.newVirtualThreadPerTaskExecutor()){
             long start = System.currentTimeMillis();
 
-            callApi();
-
+            executor.submit( () -> {
+                        try {
+                            callApi();
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+            ).get();
             System.out.println("Time: " + (System.currentTimeMillis() - start));
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
+        }catch (Exception e){
             throw new RuntimeException(e);
         }
     }
