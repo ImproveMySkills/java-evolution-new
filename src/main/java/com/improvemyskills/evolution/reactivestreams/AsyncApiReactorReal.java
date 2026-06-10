@@ -38,7 +38,7 @@ public class AsyncApiReactorReal {
                         for (JsonNode n : root) {
                             orders.add(new Order(n.get("id").asInt(), n.get("title").asText()));
                         }
-                        return orders.subList(0, 5);
+                        return orders;
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
@@ -62,11 +62,12 @@ public class AsyncApiReactorReal {
                         for (JsonNode n : root) {
                             String title = n.get("title").asText();
                             double price = n.get("price").asDouble();
+                            products.add(new Product(title, price));
 
-                            if (orders.stream()
+/*                            if (orders.stream()
                                     .anyMatch(o -> title.toLowerCase().contains(o.title.split(" ")[0].toLowerCase()))) {
                                 products.add(new Product(title, price));
-                            }
+                            }*/
                         }
                         return products;
                     } catch (Exception e) {

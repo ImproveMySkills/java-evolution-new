@@ -45,7 +45,7 @@ public class AsyncApiRxJavaReal {
             for (JsonNode n : root) {
                 orders.add(new Order(n.get("id").asInt(), n.get("title").asText()));
             }
-            return orders.subList(0, 5);
+            return orders;
         }).subscribeOn(Schedulers.io());
     }
 
@@ -59,11 +59,12 @@ public class AsyncApiRxJavaReal {
             for (JsonNode n : root) {
                 String title = n.get("title").asText();
                 double price = n.get("price").asDouble();
+                products.add(new Product(title, price));
 
                 // dépendance métier réelle
-                if (orders.stream().anyMatch(o -> title.toLowerCase().contains(o.title.split(" ")[0].toLowerCase()))) {
+/*                if (orders.stream().anyMatch(o -> title.toLowerCase().contains(o.title.split(" ")[0].toLowerCase()))) {
                     products.add(new Product(title, price));
-                }
+                }*/
             }
             return products;
         }).subscribeOn(Schedulers.io());
