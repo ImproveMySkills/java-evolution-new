@@ -105,7 +105,7 @@ public class AsyncApiRxJavaReal {
                             System.out.println("Customers: " + c.size());
                             return "DONE";
                         })
-                .timeout(java.time.Duration.ofSeconds(5))
+                //.timeout(java.time.Duration.ofSeconds(5))
                 .retry(1)
                 .onErrorReturnItem("FALLBACK")
                 .blockingGet();

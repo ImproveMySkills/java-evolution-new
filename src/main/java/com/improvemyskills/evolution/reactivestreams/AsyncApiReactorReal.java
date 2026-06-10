@@ -2,6 +2,7 @@ package com.improvemyskills.evolution.reactivestreams;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.improvemyskills.evolution.reactivestreams.models.Customer;
 import com.improvemyskills.evolution.reactivestreams.models.Order;
 import com.improvemyskills.evolution.reactivestreams.models.Product;
 import reactor.core.publisher.Mono;
