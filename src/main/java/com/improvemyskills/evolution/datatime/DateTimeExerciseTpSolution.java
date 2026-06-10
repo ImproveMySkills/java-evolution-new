@@ -6,6 +6,7 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.List;
+import java.util.Optional;
 
 public class DateTimeExerciseTpSolution {
 
@@ -41,7 +42,8 @@ public class DateTimeExerciseTpSolution {
 
     // ===== 6. Jours entre =====
     public int daysBetween(LocalDate start, LocalDate end) {
-        return (int) java.time.temporal.ChronoUnit.DAYS.between(start, end);
+        //return (int) java.time.temporal.ChronoUnit.DAYS.between(start, end);
+        return 0;
     }
 
     // ===== 7. Fuseau horaire =====

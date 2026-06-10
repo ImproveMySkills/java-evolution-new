@@ -85,6 +85,41 @@ public class AsyncApiIntegration {
                 });
     }
 
+    static CompletableFuture<List<Product>> fetchProductsByOrders() {
+
+        return fetchOrders()
+                .thenCompose(orders ->
+
+                        client.sendAsync(HttpRequest.newBuilder()
+                                                .uri(URI.create("https://fakestoreapi.com/products"))
+                                                .GET().build(),
+                                        HttpResponse.BodyHandlers.ofString())
+                                .thenApply(HttpResponse::body)
+                                .thenApply(body -> {
+                                    try {
+                                        JsonNode root = mapper.readTree(body);
+                                        List<Product> products = new ArrayList<>();
+
+                                        for (JsonNode node : root) {
+                                            String title = node.get("title").asText();
+                                            double price = node.get("price").asDouble();
+
+                                            // exemple: filtrer selon orders
+                                            if (orders.size() > 0) {
+                                                // TODO -- Logique métier
+                                                products.add(new Product(title, price));
+                                            }
+                                        }
+
+                                        return products;
+
+                                    } catch (Exception e) {
+                                        throw new RuntimeException(e);
+                                    }
+                                })
+                );
+    }
+
     // Appel API pour récupérer des commandes
     static CompletableFuture<List<Order>> fetchOrders() {
         return client.sendAsync(HttpRequest.newBuilder()

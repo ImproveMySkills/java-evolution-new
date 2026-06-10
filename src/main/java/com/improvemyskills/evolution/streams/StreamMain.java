@@ -4,6 +4,8 @@ import com.improvemyskills.evolution.models.Employee;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -19,6 +21,11 @@ public class StreamMain {
                 new Employee("Cissé", "IT", 4000),
                 new Employee("Anna", "Finance", 3500)
         );
+
+        List<String> immutableList = List.of("Ali", "Bobo", "Cissé", "Anna");
+
+        immutableList.remove(2);
+        System.out.println(immutableList.size());
 
         employees.parallelStream().forEach(e -> System.out.println(e.getDepartment()));
         //employees.stream().forEach(e -> System.out.println(e.getDepartment()));
@@ -41,7 +48,6 @@ public class StreamMain {
                         .toList();
 
         evenIndexEmployees2.forEach(System.out::println);
-
 
 
 
