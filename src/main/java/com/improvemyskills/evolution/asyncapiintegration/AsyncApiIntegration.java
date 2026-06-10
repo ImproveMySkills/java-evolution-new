@@ -143,7 +143,7 @@ public class AsyncApiIntegration {
                             String title = node.get("title").asText();
                             orders.add(new Order(id, title));
                         }
-                        return orders.subList(0, 5); // Limiter à 5 commandes
+                        return orders; // Limiter à 5 commandes
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
@@ -152,16 +152,8 @@ public class AsyncApiIntegration {
 
 
     public static void main(String[] args) {
-        var exemple = """
-                Je suis Nicolas Richou
-                Java Champion
-                Expert Backend
-                
-                """;
-        int a, b, c;
-
-
         long start = System.currentTimeMillis();
+
         CompletableFuture<List<Customer>> customersFuture = fetchCustomers();
         CompletableFuture<List<Product>> productsFuture = fetchProducts();
         CompletableFuture<List<Order>> ordersFuture = fetchOrders();
